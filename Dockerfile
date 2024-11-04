@@ -13,6 +13,13 @@ COPY app/ /app/
 # Install required Python packages
 RUN pip install requests
 
+# envs
+ARG CLOUDFLARE_API_TOKEN
+ARG ZONE_ID
+
+ENV CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+ENV ZONE_ID=${ZONE_ID}
+
 # Copy the cron job file
 COPY cronjob /etc/cron.d/cronjob
 

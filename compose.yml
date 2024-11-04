@@ -4,6 +4,12 @@ services:
   cloudflare-updater:
     build:
       context: .
+      args:
+        - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+        - ZONE_ID=${ZONE_ID}
+    environment:
+      CLOUDFLARE_API_TOKEN: ${CLOUDFLARE_API_TOKEN}
+      ZONE_ID: ${ZONE_ID}
     pull_policy: build
     image: cloudflare-updater:latest
     container_name: cloudflare-updater
