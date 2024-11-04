@@ -1,1 +1,1 @@
-*/10 * * * * /usr/bin/env CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN ZONE_ID=$ZONE_ID /usr/local/bin/python /app/cloudflare_ip_updater.py >> /var/log/cron.log 2>&1
+*/10 * * * * /usr/local/bin/python /app/cloudflare_ip_updater.py >> /var/log/cron.log 2>&1

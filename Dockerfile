@@ -33,4 +33,4 @@ RUN crontab /etc/cron.d/cronjob
 RUN touch /var/log/cron.log
 
 # Start the cron service in the foreground
-CMD cron && tail -f /var/log/cron.log
+CMD printenv > /etc/environment && cron && tail -f /var/log/cron.log
