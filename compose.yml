@@ -15,4 +15,4 @@ services:
 
 networks:
   nginx-proxy-manager_default:
-    external: false
+    external: true
