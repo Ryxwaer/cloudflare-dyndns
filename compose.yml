@@ -10,8 +10,6 @@ services:
     restart: unless-stopped
     networks:
       - nginx-proxy-manager_default
-    volumes:
-      - ./app:/app
 
 networks:
   nginx-proxy-manager_default:
